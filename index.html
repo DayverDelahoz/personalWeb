@@ -3,41 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Presentación Personal</title>
+    <title>Dayver De La Hoz - Desarrollador | Arquitecto Software | AWS</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <meta name="description" content="Dayver David De La Hoz Torregrosa - Desarrollador y Arquitecto de Software con más de 12 años de experiencia en AWS, microservicios y bases de datos.">
+    <meta name="keywords" content="desarrollador, AWS, microservicios, bases datos, arquitecto software">
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link" data-i18n="a11y.skip-link">Saltar al contenido principal</a>
+    
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="language-toggle-btn" aria-label="Cambiar idioma">
+            🌐 ES | EN
+        </button>
+    </div>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+        <nav role="navigation" aria-label="Navegación principal">
+            <ul class="main-nav">
+                <li><a href="index.html" aria-current="page" data-i18n="nav.inicio">Inicio</a></li>
+                <li><a href="sobre-mi.html" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                <li><a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a></li>
+                <li><a href="aficiones.html" data-i18n="nav.aficiones">Aficiones</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- Breadcrumb para navegación -->
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="index.html" data-i18n="breadcrumb.home">Inicio</a></li>
+                <li aria-current="page" data-i18n="breadcrumb.home-page">Página Principal</li>
+            </ol>
+        </nav>
+
         <section class="hero">
-            <img src="media/perfil.png" alt="Foto de perfil de Dayver David De la hoz Torregrosa" class="foto-perfil">
-            <h1>Dayver David De la hoz Torregrosa</h1>
-            <p class="subtitulo">Desarrollador | Arquitecto de Software | Especialista en AWS</p>
-            <p class="descripcion">Con más de 12 años de experiencia en desarrollo y soporte de aplicaciones, bases de datos relacionales, microservicios y servicios AWS en Exdesis.</p>
+            <img src="media/perfil.png" 
+                 alt="Foto de perfil profesional de Dayver David De la hoz Torregrosa, desarrollador con más de 12 años de experiencia" 
+                 class="foto-perfil">
+            <h1 data-i18n="hero.title">Dayver David De la hoz Torregrosa</h1>
+            <p class="subtitulo" data-i18n="hero.subtitle">Desarrollador | Arquitecto de Software | Especialista en AWS</p>
+            <p class="descripcion" data-i18n="hero.description">Con más de 12 años de experiencia en desarrollo y soporte de aplicaciones, bases de datos relacionales, microservicios y servicios AWS en Exdesis.</p>
             <br>
 
             <div class="video-container">
-                <video controls width="100%" style="max-width: 800px; height: auto;">
+                <video controls 
+                       width="100%" 
+                       style="max-width: 800px; height: auto;"
+                       aria-label="Video de presentación profesional de Dayver De La Hoz">
                     <source src="media/Desarrollador Dayver DDT.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento video.
+                    <p>Tu navegador no soporta el elemento video. 
+                       <a href="media/Desarrollador Dayver DDT.mp4">Descargar video</a>
+                    </p>
                 </video>
+            </div>
+
+            <!-- Quick Contact Section -->
+            <div class="quick-contact">
+                <h2 data-i18n="hero.connect">Conecta conmigo</h2>
+                <div class="social-links">
+                    <a href="/cdn-cgi/l/email-protection#087d673b393a393e3a487d6661677e61266d7b" class="social-link" aria-label="Enviar email">
+                        📧 <span data-i18n="contact.email">Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/dayverdelahoz" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="social-link"
+                       aria-label="Ver perfil de LinkedIn (se abre en nueva ventana)">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/dayverdelahoz" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="social-link"
+                       aria-label="Ver repositorios de GitHub (se abre en nueva ventana)">
+                        💻 GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Skills -->
+        <section class="featured-skills">
+            <h2 data-i18n="skills.main-tech">Tecnologías Principales</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>☁️ <span data-i18n="skills.aws-cloud">AWS Cloud</span></h3>
+                    <p>Lambda, EC2, S3, RDS</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🏗️ <span data-i18n="skills.microservices">Microservicios</span></h3>
+                    <p>Docker, Kubernetes, API REST</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🗃️ <span data-i18n="skills.databases">Bases de Datos</span></h3>
+                    <p>SQL Server, PostgreSQL, MySQL</p>
+                </div>
+                <div class="skill-card">
+                    <h3>⚙️ <span data-i18n="skills.devops">DevOps</span></h3>
+                    <p>CI/CD, CloudFormation, Terraform</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer mejorado con navegación y información adicional -->
     <footer>
-        <p>&copy; 2025 Dayver David De la hoz Torregrosa. Todos los derechos reservados.</p>
-    </footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <!-- Navegación del sitio -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.navigation">Navegación</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                        <li><a href="sobre-mi.html" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                        <li><a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a></li>
+                        <li><a href="aficiones.html" data-i18n="nav.aficiones">Aficiones</a></li>
+                        <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
+                    </ul>
+                </div>
 
+                <!-- Contacto rápido -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact">Contacto</h3>
+                    <div class="footer-contact">
+                        <p>📧 <a href="mailto:uo312162@uniovi.es">uo312162@uniovi.es</a></p>
+                        <p>🌐 <a href="https://linkedin.com/in/dayverdelahoz" target="_blank" rel="noopener">LinkedIn</a></p>
+                        <p>💻 <a href="https://github.com/dayverdelahoz" target="_blank" rel="noopener">GitHub</a></p>
+                        <p>📍 <span data-i18n="footer.location">Oviedo, Asturias</span></p>
+                    </div>
+                </div>
+
+                <!-- Especialidades técnicas -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.expertise">Especialidades</h3>
+                    <div class="footer-skills">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Microservicios</span>
+                        <span class="skill-tag">Bases de Datos</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+
+                <!-- Información adicional -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about">Acerca de</h3>
+                    <p data-i18n="footer.about-text">
+                        Desarrollador con 12+ años de experiencia en Exdesis. 
+                        Estudiante de Máster en Ingeniería Web (Universidad de Oviedo).
+                    </p>
+                    <div class="footer-badges">
+                        <span class="badge">🎓 Ing. Web</span>
+                        <span class="badge">☁️ AWS Certified</span>
+                        <span class="badge">🏢 12+ años exp.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Dayver David De la hoz Torregrosa. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <p class="last-updated">
+                        <span data-i18n="footer.last-updated">Última actualización:</span> 
+                        <time datetime="2025-12-11">11 de diciembre de 2025</time>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="if(window.accessibilityFeatures) window.accessibilityFeatures.showKeyboardHelp(); return false;" data-i18n="footer.accessibility">Accesibilidad</a>
+                    <span class="footer-version">v2.0</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/i18n.js"></script>
+    <script src="js/auto-i18n.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/accessibility.js"></script>
 </body>
 </html>

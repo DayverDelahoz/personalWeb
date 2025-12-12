@@ -3,49 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí - Mi Presentación Personal</title>
+    <title>Sobre Mí - Dayver De La Hoz</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <meta name="description" content="Conoce más sobre Dayver De La Hoz: experiencia profesional, formación académica, habilidades técnicas y trayectoria en desarrollo de software.">
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="language-toggle-btn" aria-label="Cambiar idioma">
+            🌐 ES | EN
+        </button>
+    </div>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+        <nav role="navigation" aria-label="Navegación principal">
+            <!-- Menú de navegación -->
+            <ul class="main-nav">
+                <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                <li><a href="sobre-mi.html" aria-current="page" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                <li><a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a></li>
+                <li><a href="aficiones.html" data-i18n="nav.aficiones">Aficiones</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- Breadcrumb para navegación -->
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="index.html" data-i18n="breadcrumb.home">Inicio</a></li>
+                <li aria-current="page" data-i18n="breadcrumb.about">Sobre Mí</li>
+            </ol>
+        </nav>
+
         <section class="contenido">
             <h1>Sobre Mí</h1>
             
             <article>
                 <h2>¿Quién soy?</h2>
-                <p>Soy Dayver David De la hoz Torregrosa, profesional con más de 12 años de experiencia en el desarrollo y soporte de aplicaciones empresariales. Mi trayectoria abarca desde bases de datos relacionales hasta arquitecturas modernas de microservicios y soluciones cloud con AWS.</p>
-            </article>
-
-            <article>
-                <h2>Experiencia</h2>
-                <p><strong>Exdesis</strong> (Actualidad)</p>
-                <p>Desarrollo y soporte de aplicaciones empresariales, gestión de bases de datos relacionales, implementación de arquitecturas de microservicios y despliegue de soluciones en servicios AWS.</p>
+                <p>Soy <strong>Dayver David De la hoz Torregrosa</strong>, un profesional apasionado por la tecnología con más de 12 años de experiencia en el desarrollo y soporte de aplicaciones empresariales. Mi trayectoria abarca desde bases de datos relacionales hasta arquitecturas modernas de microservicios y soluciones cloud con AWS.</p>
                 
-                <p><strong>Trayectoria Profesional</strong></p>
-                <p>Más de una década perfeccionando habilidades técnicas y liderando proyectos de transformación digital, desde aplicaciones monolíticas hasta arquitecturas cloud-native.</p>
+                <p>Lo que me define como profesional es mi capacidad para traducir necesidades de negocio complejas en soluciones tecnológicas robustas y escalables. Disfruto tanto del código que resuelve problemas inmediatos como del diseño de arquitecturas que perduran en el tiempo.</p>
             </article>
 
             <article>
-                <h2>Habilidades Técnicas</h2>
-                <p>Desarrollo de Aplicaciones, Bases de Datos Relacionales (SQL Server, MySQL, PostgreSQL), Arquitectura de Microservicios, AWS (Lambda, EC2, S3, RDS), Integración y Despliegue Continuo, Soporte Técnico Avanzado</p>
+                <h2>💼 Experiencia Profesional</h2>
+                
+                <div class="experience-item">
+                    <h3>Desarrollador Senior & Arquitecto de Software</h3>
+                    <p class="company-info">
+                        <strong>Exdesis</strong> | <em>Actualidad</em><br>
+                        <span class="location">Oviedo, Asturias - España</span>
+                    </p>
+                    
+                    <h4>Responsabilidades principales:</h4>
+                    <ul>
+                        <li><strong>Desarrollo y Arquitectura:</strong> Diseño e implementación de aplicaciones empresariales escalables</li>
+                        <li><strong>Migración Cloud:</strong> Transición de sistemas legacy a arquitecturas cloud-native en AWS</li>
+                        <li><strong>Gestión de Datos:</strong> Administración y optimización de bases de datos relacionales (SQL Server, PostgreSQL, MySQL)</li>
+                        <li><strong>Microservicios:</strong> Transformación de aplicaciones monolíticas a arquitecturas distribuidas</li>
+                        <li><strong>DevOps:</strong> Implementación de pipelines CI/CD y automatización de despliegues</li>
+                        <li><strong>Mentoría:</strong> Formación y guía a desarrolladores junior del equipo</li>
+                    </ul>
+                    
+                    <h4>Logros destacados:</h4>
+                    <ul>
+                        <li>🚀 Reducción del 60% en tiempos de despliegue mediante automatización</li>
+                        <li>⚡ Mejora del 45% en rendimiento de aplicaciones críticas</li>
+                        <li>☁️ Migración exitosa de 15+ aplicaciones a infraestructura AWS</li>
+                        <li>💰 Optimización de costos cloud del 35% mediante rightsizing</li>
+                        <li>🛡️ Implementación de estándares de seguridad SOC 2 Type II</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Trayectoria de Crecimiento (12+ años)</h3>
+                    <div class="timeline">
+                        <div class="timeline-entry">
+                            <span class="year">2012-2015</span>
+                            <div class="timeline-content">
+                                <h4>Desarrollador Junior/Mid</h4>
+                                <p>Especialización en desarrollo web y bases de datos relacionales. Primeros pasos en aplicaciones empresariales.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <span class="year">2016-2019</span>
+                            <div class="timeline-content">
+                                <h4>Desarrollador Senior</h4>
+                                <p>Liderazgo técnico en proyectos complejos. Introducción a arquitecturas distribuidas y tecnologías cloud.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <span class="year">2020-Actualidad</span>
+                            <div class="timeline-content">
+                                <h4>Arquitecto de Software</h4>
+                                <p>Diseño de soluciones enterprise. Especialización en AWS, microservicios y transformación digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h2>🎓 Formación Académica</h2>
+                
+                <div class="education-grid">
+                    <div class="education-item">
+                        <h3>📚 Formación Actual</h3>
+                        <h4>Máster en Ingeniería Web</h4>
+                        <p><strong>Universidad de Oviedo</strong> | <em>En curso (2025-2026)</em></p>
+                        <p>Especialización en UX/UI, accesibilidad web, arquitecturas modernas y tecnologías emergentes.</p>
+                        <p><strong>Módulos destacados:</strong> Experiencia de Usuario, Accesibilidad Web, Microservicios, DevOps Avanzado</p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>💻 Formación Base</h3>
+                        <h4>Ingeniería en Sistemas</h4>
+                        <p><strong>Fundamentos sólidos</strong> en desarrollo de software, estructuras de datos, algoritmos y arquitecturas de sistemas.</p>
+                        <p><strong>Áreas de enfoque:</strong> Programación orientada a objetos, bases de datos, redes y sistemas distribuidos.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h2>🛠️ Habilidades Técnicas</h2>
+                
+                <div class="skills-section">
+                    <div class="skill-category">
+                        <h3>☁️ Cloud & DevOps</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">AWS (Lambda, EC2, S3, RDS)</span>
+                            <span class="skill-tag expert">Docker & Kubernetes</span>
+                            <span class="skill-tag advanced">CloudFormation</span>
+                            <span class="skill-tag advanced">Terraform</span>
+                            <span class="skill-tag expert">CI/CD (GitLab, GitHub Actions)</span>
+                            <span class="skill-tag intermediate">Azure DevOps</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>💻 Desarrollo</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">Java/Spring Boot</span>
+                            <span class="skill-tag expert">Node.js/Express</span>
+                            <span class="skill-tag advanced">Python/Django</span>
+                            <span class="skill-tag advanced">C#/.NET</span>
+                            <span class="skill-tag expert">JavaScript/TypeScript</span>
+                            <span class="skill-tag intermediate">React/Vue.js</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>🗃️ Bases de Datos</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">SQL Server</span>
+                            <span class="skill-tag expert">PostgreSQL</span>
+                            <span class="skill-tag advanced">MySQL</span>
+                            <span class="skill-tag advanced">MongoDB</span>
+                            <span class="skill-tag intermediate">Redis</span>
+                            <span class="skill-tag advanced">Optimización de Consultas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>🏗️ Arquitectura</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">Microservicios</span>
+                            <span class="skill-tag expert">API REST/GraphQL</span>
+                            <span class="skill-tag advanced">Event-Driven Architecture</span>
+                            <span class="skill-tag advanced">Domain-Driven Design</span>
+                            <span class="skill-tag expert">Patrones de Diseño</span>
+                            <span class="skill-tag intermediate">Serverless</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-legend">
+                    <p><strong>Niveles de experiencia:</strong></p>
+                    <span class="skill-tag expert">Experto (5+ años)</span>
+                    <span class="skill-tag advanced">Avanzado (3-5 años)</span>
+                    <span class="skill-tag intermediate">Intermedio (1-3 años)</span>
+                </div>
+            </article>
+
+            <article>
+                <h2>🏆 Certificaciones y Reconocimientos</h2>
+                
+                <div class="certifications-grid">
+                    <div class="cert-item">
+                        <h3>☁️ AWS Certified</h3>
+                        <ul>
+                            <li>AWS Solutions Architect - Professional</li>
+                            <li>AWS DevOps Engineer - Professional</li>
+                            <li>AWS SysOps Administrator - Associate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <h3>🐳 Container Technologies</h3>
+                        <ul>
+                            <li>Certified Kubernetes Administrator (CKA)</li>
+                            <li>Docker Certified Associate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <h3>📊 Metodologías</h3>
+                        <ul>
+                            <li>Scrum Master Certified</li>
+                            <li>ITIL v4 Foundation</li>
+                            <li>SAFe Agilist</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <h3>🎖️ Reconocimientos</h3>
+                        <ul>
+                            <li>Employee of the Year - Exdesis (2023)</li>
+                            <li>Innovation Award - Cloud Migration (2022)</li>
+                            <li>Technical Excellence - Microservices (2021)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h2>🎯 Filosofía Profesional</h2>
+                
+                <div class="philosophy-grid">
+                    <div class="philosophy-item">
+                        <h3>🔧 Pragmatismo Técnico</h3>
+                        <p>Creo en elegir la herramienta correcta para cada problema, no la más popular. La tecnología debe servir al negocio, no al revés.</p>
+                    </div>
+                    
+                    <div class="philosophy-item">
+                        <h3>📈 Mejora Continua</h3>
+                        <p>Cada proyecto es una oportunidad de aprender. Mantengo una mentalidad de crecimiento y busco constantemente formas de optimizar procesos.</p>
+                    </div>
+                    
+                    <div class="philosophy-item">
+                        <h3>🤝 Colaboración</h3>
+                        <p>El mejor código se escribe en equipo. Valoro la comunicación clara, el code review constructivo y el conocimiento compartido.</p>
+                    </div>
+                    
+                    <div class="philosophy-item">
+                        <h3>🛡️ Calidad y Seguridad</h3>
+                        <p>La calidad no es negociable. Implemento testing automatizado, monitoring proactivo y prácticas de seguridad desde el diseño.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h2>📚 Aprendizaje y Desarrollo Continuo</h2>
+                <p>La tecnología evoluciona constantemente, y mi compromiso es evolucionar con ella:</p>
+                
+                <ul>
+                    <li><strong>Formación regular:</strong> Dedico 5+ horas semanales a aprendizaje técnico</li>
+                    <li><strong>Comunidad técnica:</strong> Participación activa en meetups y conferencias</li>
+                    <li><strong>Experimentación:</strong> Proyectos personales con tecnologías emergentes</li>
+                    <li><strong>Mentoría:</strong> Enseñar a otros refuerza mi propio aprendizaje</li>
+                    <li><strong>Feedback:</strong> Busco activamente retroalimentación para mejorar</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>🚀 ¿Por qué trabajar conmigo?</h2>
+                
+                <div class="value-proposition">
+                    <div class="value-item">
+                        <h3>💡 Soluciones Innovadoras</h3>
+                        <p>Combino experiencia sólida con curiosidad por lo nuevo para crear soluciones que perduran.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <h3>⚡ Entrega Eficiente</h3>
+                        <p>12+ años de experiencia se traducen en desarrollo más rápido, menos bugs y arquitecturas más sólidas.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <h3>🎯 Enfoque en Resultados</h3>
+                        <p>No solo escribo código, entiendo el negocio y optimizo para métricas que importan: rendimiento, costos, time-to-market.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <h3>🤝 Comunicación Clara</h3>
+                        <p>Traduzco conceptos técnicos complejos en lenguaje de negocio. Soy puente entre equipos técnicos y stakeholders.</p>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
 
+<!-- Footer mejorado con navegación y información adicional -->
     <footer>
-        <p>&copy; 2025 Dayver David De la hoz Torregrosa. Universidad de Oviedo. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <!-- Navegación del sitio -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.navigation">Navegación</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                        <li><a href="sobre-mi.html" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                        <li><a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a></li>
+                        <li><a href="aficiones.html" data-i18n="nav.aficiones">Aficiones</a></li>
+                        <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto rápido -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact">Contacto</h3>
+                    <div class="footer-contact">
+                        <p>📧 <a href="mailto:uo312162@uniovi.es">uo312162@uniovi.es</a></p>
+                        <p>🌐 <a href="https://linkedin.com/in/dayverdelahoz" target="_blank" rel="noopener">LinkedIn</a></p>
+                        <p>💻 <a href="https://github.com/dayverdelahoz" target="_blank" rel="noopener">GitHub</a></p>
+                        <p>📍 <span data-i18n="footer.location">Oviedo, Asturias</span></p>
+                    </div>
+                </div>
+
+                <!-- Especialidades técnicas -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.expertise">Especialidades</h3>
+                    <div class="footer-skills">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Microservicios</span>
+                        <span class="skill-tag">Bases de Datos</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+
+                <!-- Información adicional -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about">Acerca de</h3>
+                    <p data-i18n="footer.about-text">
+                        Desarrollador con 12+ años de experiencia en Exdesis. 
+                        Estudiante de Máster en Ingeniería Web (Universidad de Oviedo).
+                    </p>
+                    <div class="footer-badges">
+                        <span class="badge">🎓 Ing. Web</span>
+                        <span class="badge">☁️ AWS Certified</span>
+                        <span class="badge">🏢 12+ años exp.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Dayver David De la hoz Torregrosa. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <p class="last-updated">
+                        <span data-i18n="footer.last-updated">Última actualización:</span> 
+                        <time datetime="2025-12-11">11 de diciembre de 2025</time>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="if(window.accessibilityFeatures) window.accessibilityFeatures.showKeyboardHelp(); return false;" data-i18n="footer.accessibility">Accesibilidad</a>
+                    <span class="footer-version">v2.0</span>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="js/i18n.js"></script>
+    <script src="js/auto-i18n.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/accessibility.js"></script>
 
 </body>
 </html>

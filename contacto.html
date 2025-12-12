@@ -3,44 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Mi Presentación Personal</title>
+    <title>Contacto - Dayver De La Hoz</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <meta name="description" content="Contacta con Dayver De La Hoz para consultas técnicas, propuestas de proyectos o colaboraciones en soluciones tecnológicas.">
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="language-toggle-btn" aria-label="Cambiar idioma">
+            🌐 ES | EN
+        </button>
+    </div>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+        <nav role="navigation" aria-label="Navegación principal">
+            <ul class="main-nav">
+                <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                <li><a href="sobre-mi.html" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                <li><a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a></li>
+                <li><a href="aficiones.html" data-i18n="nav.aficiones">Aficiones</a></li>
+                <li><a href="contacto.html" aria-current="page" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- Breadcrumb para navegación -->
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="index.html" data-i18n="breadcrumb.home">Inicio</a></li>
+                <li aria-current="page" data-i18n="breadcrumb.contact">Contacto</li>
+            </ol>
+        </nav>
+
         <section class="contenido">
-            <h1>Contacto</h1>
+            <h1 data-i18n="breadcrumb.contact">Contacto</h1>
             
             <article>
                 <h2>¿Hablamos?</h2>
-                <p>Si tienes alguna consulta técnica, propuesta de proyecto o quieres colaborar en soluciones tecnológicas, no dudes en contactarme.</p>
+                <p>Si tienes alguna consulta técnica, propuesta de proyecto o quieres colaborar en soluciones tecnológicas, no dudes en contactarme. Respondo rápidamente a todas las consultas profesionales.</p>
             </article>
 
             <article>
                 <h2>Información de contacto</h2>
-                <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cabfa5f9fbf8fbfcf88abfa4a3a5bca3e4afb9">uo312162@uniovi.es</a></p>
-                <p><strong>Empresa:</strong> Exdesis</p>
-                <p><strong>LinkedIn:</strong> linkedin.com/in/dayverdelahoz</p>
-                <p><strong>GitHub:</strong> github.com/dayver.delahoz</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>📧 Email Principal</h3>
+                        <p>
+                            <a href="mailto:uo312162@uniovi.es" 
+                               aria-label="Enviar email a uo312162@uniovi.es">
+                               uo312162@uniovi.es
+                            </a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>🏢 Empresa</h3>
+                        <p>Exdesis</p>
+                        <p><em>Desarrollador Senior | Arquitecto de Software</em></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>💼 LinkedIn</h3>
+                        <p>
+                            <a href="https://linkedin.com/in/dayverdelahoz" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="Ver perfil de LinkedIn (se abre en nueva ventana)">
+                               linkedin.com/in/dayverdelahoz
+                            </a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>💻 GitHub</h3>
+                        <p>
+                            <a href="https://github.com/dayverdelahoz" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="Ver repositorios de GitHub (se abre en nueva ventana)">
+                               github.com/dayverdelahoz
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </article>
 
             <article>
-                <h2>Ubicación</h2>
-                <p>Oviedo - España</p>
+                <h2>📍 Ubicación</h2>
+                <p><strong>Ciudad:</strong> Oviedo, Asturias - España</p>
+                <p><strong>Disponibilidad:</strong> Trabajo remoto y presencial</p>
+                <p><strong>Zona horaria:</strong> CET (Central European Time)</p>
+            </article>
+
+            <article>
+                <h2>💬 Formulario de contacto</h2>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               required 
+                               aria-describedby="name-help">
+                        <small id="name-help">Tu nombre y apellidos</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               required
+                               aria-describedby="email-help">
+                        <small id="email-help">Tu dirección de email para responder</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecciona el tipo de consulta</option>
+                            <option value="proyecto">Propuesta de proyecto</option>
+                            <option value="colaboracion">Colaboración</option>
+                            <option value="consultoria">Consultoría técnica</option>
+                            <option value="empleo">Oportunidad laboral</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" 
+                                  name="message" 
+                                  rows="5" 
+                                  required
+                                  aria-describedby="message-help"></textarea>
+                        <small id="message-help">Describe tu consulta o propuesta</small>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </article>
+
+            <article>
+                <h2>⏱️ Tiempo de respuesta</h2>
+                <p><strong>Email:</strong> 24-48 horas en días laborables</p>
+                <p><strong>LinkedIn:</strong> 2-3 días para mensajes profesionales</p>
+                <p><strong>Consultas urgentes:</strong> Marcar como "urgente" en el asunto del email</p>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Dayver
+<footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <!-- Navegación del sitio -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.navigation">Navegación</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
+                        <li><a href="sobre-mi.html" data-i18n="nav.sobre-mi">Sobre Mí</a></li>
+                        <li><a href="proyectos.html" data-i18n="nav.proyectos">Proyectos</a></li>
+                        <li><a href="aficiones.html" data-i18n="nav.aficiones">Aficiones</a></li>
+                        <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto rápido -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact">Contacto</h3>
+                    <div class="footer-contact">
+                        <p>📧 <a href="mailto:uo312162@uniovi.es">uo312162@uniovi.es</a></p>
+                        <p>🌐 <a href="https://linkedin.com/in/dayverdelahoz" target="_blank" rel="noopener">LinkedIn</a></p>
+                        <p>💻 <a href="https://github.com/dayverdelahoz" target="_blank" rel="noopener">GitHub</a></p>
+                        <p>📍 <span data-i18n="footer.location">Oviedo, Asturias</span></p>
+                    </div>
+                </div>
+
+                <!-- Especialidades técnicas -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.expertise">Especialidades</h3>
+                    <div class="footer-skills">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Microservicios</span>
+                        <span class="skill-tag">Bases de Datos</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+
+                <!-- Información adicional -->
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about">Acerca de</h3>
+                    <p data-i18n="footer.about-text">
+                        Desarrollador con 12+ años de experiencia en Exdesis. 
+                        Estudiante de Máster en Ingeniería Web (Universidad de Oviedo).
+                    </p>
+                    <div class="footer-badges">
+                        <span class="badge">🎓 Ing. Web</span>
+                        <span class="badge">☁️ AWS Certified</span>
+                        <span class="badge">🏢 12+ años exp.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Dayver David De la hoz Torregrosa. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <p class="last-updated">
+                        <span data-i18n="footer.last-updated">Última actualización:</span> 
+                        <time datetime="2025-12-11">11 de diciembre de 2025</time>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="if(window.accessibilityFeatures) window.accessibilityFeatures.showKeyboardHelp(); return false;" data-i18n="footer.accessibility">Accesibilidad</a>
+                    <span class="footer-version">v2.0</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/auto-i18n.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/accessibility.js"></script>
+</body>
+</html>
