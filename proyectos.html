@@ -20,6 +20,18 @@
 
     <header>
         <nav role="navigation" aria-label="Navegación principal">
+            <div class="header-search-container">
+                <input type="search" 
+                       id="site-search" 
+                       data-i18n-placeholder="search.placeholder"
+                       aria-label="Buscar contenido del sitio"
+                       class="header-search-input">
+                <button onclick="searchSite()" 
+                        aria-label="Ejecutar búsqueda"
+                        class="header-search-button">🔍</button>
+            </div>
+            <div id="search-results" class="header-search-results" aria-live="polite"></div>
+            
             <!-- Menú de navegación -->
             <ul class="main-nav">
                 <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
